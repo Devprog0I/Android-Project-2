@@ -1,0 +1,97 @@
+
+object DataProvider {
+    fun getGamesList(): List<GameItem> {
+        return listOf(
+            GameItem(
+                title = "The Witcher 3: Wild Hunt",
+                imageUrl = "witcher3",
+                developer = "CD Projekt Red",
+                year = 2015,
+                genre = "RPG",
+                platform = "PC, PS4, Xbox One",
+                detailedInfo = "Эпическая ролевая игра в открытом мире. Вы играете за Геральта из Ривии, охотника на чудовищ, который ищет свою приемную дочь. Игра получила более 800 наград и считается одной из лучших RPG всех времен."
+            ),
+            GameItem(
+                title = "Red Dead Redemption 2",
+                imageUrl = "rdr2",
+                developer = "Rockstar Games",
+                year = 2018,
+                genre = "Action-Adventure",
+                platform = "PC, PS4, Xbox One",
+                detailedInfo = "Вестерн в открытом мире. Вы играете за Артура Моргана, члена банды Датча ван дер Линде. Игра предлагает огромный детализированный мир, захватывающий сюжет и множество побочных активностей."
+            ),
+            GameItem(
+                title = "Minecraft",
+                imageUrl = "minecraft",
+                developer = "Mojang Studios",
+                year = 2011,
+                genre = "Sandbox",
+                platform = "PC, PS4, Xbox, Switch, Mobile",
+                detailedInfo = "Игра о выживании и строительстве в процедурно генерируемом мире из блоков. Самая продаваемая игра всех времен с более чем 300 миллионами копий."
+            ),
+            GameItem(
+                title = "The Legend of Zelda: Breath of the Wild",
+                imageUrl = "zelda",
+                developer = "Nintendo",
+                year = 2017,
+                genre = "Action-Adventure",
+                platform = "Switch, Wii U",
+                detailedInfo = "Революционная игра в открытом мире. Вы играете за Линка, который пробуждается после столетнего сна, чтобы победить злого Ганона. Игра предлагает свободу исследования и решения головоломок."
+            ),
+            GameItem(
+                title = "God of War (2018)",
+                imageUrl = "godofwar",
+                developer = "Santa Monica Studio",
+                year = 2018,
+                genre = "Action",
+                platform = "PS4, PC",
+                detailedInfo = "Перезапуск культовой серии. Кратос, бывший бог войны, теперь живет в мире скандинавской мифологии со своим сыном Атреем. Игра сочетает жестокие бои с трогательной историей об отцовстве."
+            ),
+            GameItem(
+                title = "Cyberpunk 2077",
+                imageUrl = "cyberpunk",
+                developer = "CD Projekt Red",
+                year = 2020,
+                genre = "RPG",
+                platform = "PC, PS5, Xbox Series, PS4",
+                detailedInfo = "RPG в мире киберпанка. Вы играете за наемника Ви в мегаполисе Найт-Сити. Игра предлагает нелинейный сюжет, настройку персонажа и множество способов выполнения заданий."
+            ),
+            GameItem(
+                title = "Super Mario Odyssey",
+                imageUrl = "mario",
+                developer = "Nintendo",
+                year = 2017,
+                genre = "Platformer",
+                platform = "Switch",
+                detailedInfo = "Трехмерный платформер о приключениях Марио. Путешествуйте по разным мирам, собирайте Луны и спасайте принцессу Пич от Боузера. Инновационная механика с шапкой-посохом Кеппи."
+            ),
+            GameItem(
+                title = "Elden Ring",
+                imageUrl = "eldenring",
+                developer = "FromSoftware",
+                year = 2022,
+                genre = "Action RPG",
+                platform = "PC, PS5, Xbox Series, PS4",
+                detailedInfo = "Сложная ролевая игра в открытом мире от создателей Dark Souls. Вы играете за Потускневшего, стремящегося стать Повелителем Междуземья. Огромный мир, глубокий лор, созданный при участии Джорджа Мартина."
+            ),
+            GameItem(
+                title = "GTA V",
+                imageUrl = "gta5",
+                developer = "Rockstar Games",
+                year = 2013,
+                genre = "Action",
+                platform = "PC, PS5, Xbox Series, PS4, Xbox 360",
+                detailedInfo = "Криминальный экшн в открытом мире. Три главных героя, огромный город Лос-Сантос, насыщенный сюжет и популярный онлайн-режим. Одна из самых финансово успешных игр в истории."
+            ),
+            GameItem(
+                title = "Hades",
+                imageUrl = "hades",
+                developer = "Supergiant Games",
+                year = 2020,
+                genre = "Roguelike",
+                platform = "PC, Switch, PS5, Xbox Series",
+                detailedInfo = "Roguelike-игра о сыне Аида, Загрее, который пытается сбежать из подземного мира. Уникальный стиль, захватывающий геймплей и отличная история, разворачивающаяся через взаимодействие с персонажами."
+            )
+        )
+    }
+}
