@@ -1,0 +1,11 @@
+package com.example.database
+
+data class GameItem(
+    val title: String,           // название игры
+    val imageUrl: String,         // URL изображения (в проекте используется локальный ресурс)
+    val developer: String,        // разработчик
+    val year: Int,                // год выпуска
+    val genre: String,            // жанр
+    val platform: String,         // платформа
+    val detailedInfo: String      // подробное описание
+)
