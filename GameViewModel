@@ -1,0 +1,65 @@
+package com.example.database
+
+import androidx.lifecycle.ViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+
+class GameViewModel : ViewModel() {
+    // Получаем список игр
+    private val gamesList = DataProvider.getGamesList()
+
+    // Состояние - текущий индекс
+    private val _currentIndex = MutableStateFlow(0)
+    val currentIndex: StateFlow<Int> = _currentIndex.asStateFlow()
+
+    // Состояние - показывать ли детальную информацию
+    private val _showDetails = MutableStateFlow(false)
+    val showDetails: StateFlow<Boolean> = _showDetails.asStateFlow()
+
+    // Текущий элемент на основе индекса (вычисляемое свойство)
+    val currentGame: GameItem
+        get() = gamesList[_currentIndex.value]
+
+    // Размер коллекции
+    val collectionSize: Int
+        get() = gamesList.size
+
+    // Флаги для кнопок навигации
+    val isFirstItem: Boolean
+        get() = _currentIndex.value == 0
+
+    val isLastItem: Boolean
+        get() = _currentIndex.value == gamesList.size - 1
+
+    // Методы навигации
+    fun nextItem() {
+        if (!isLastItem) {
+            _currentIndex.value++
+        }
+    }
+
+    fun previousItem() {
+        if (!isFirstItem) {
+            _currentIndex.value--
+        }
+    }
+
+    // Метод для переключения отображения деталей
+    fun toggleDetails() {
+        _showDetails.value = !_showDetails.value
+    }
+
+    // Метод для сброса состояния
+    fun resetShowDetails() {
+        _showDetails.value = false
+    }
+
+    // Метод для перехода к конкретному индексу
+    fun navigateToIndex(index: Int) {
+        if (index in 0 until gamesList.size) {
+            _currentIndex.value = index
+            resetShowDetails()
+        }
+    }
+}
